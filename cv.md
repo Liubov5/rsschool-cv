@@ -35,5 +35,14 @@ My Pet Projects on Github <https://github.com/Liubov5/>
 Running, Dancing, Quizes, City Quests, English Club. 
 
 ## Code Examples
-
+```const [modal, setModal] = useContext(ModalContext);
+    const dispatch = useDispatch();
+    const addToCart = (item) => {
+        dispatch(addItemAction(item));
+        dispatch(inShoppingCartAction(item.id));
+    }
+    const openModal = (id) =>{
+        setModal(prevstate=> ({...prevstate, status:true, id:id}));
+    }
+```
 
